@@ -51,7 +51,7 @@ interface StreamProviderProps {
 }
 
 export const StreamProvider = ({ children }: StreamProviderProps) => {
-  const [currentStream, setCurrentStream] = useState<string | null>(null);
+  const [currentStream, setCurrentStream] = useState<string | null>('default-stream-id');
   const [streamMetadata, setStreamMetadata] = useState<StreamMetadata>(defaultMetadata);
   const [connectionStatus, setConnectionStatus] = useState<'disconnected' | 'connecting' | 'connected' | 'error'>('disconnected');
   const [error, setError] = useState<string | null>(null);
